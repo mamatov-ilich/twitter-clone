@@ -1,0 +1,21 @@
+<div
+  class="rounded-full h-16 w-16 p-4 flex items-center justify-center hover:bg-opacity-10 hover:bg-blue-300 cursor-pointer transition"
+>
+  <img src="./assets/images/logo.svg" alt="logo" class="h-14 w-14" />
+</div>
+<div class="flex flex-row gap-3" *ngFor="let i of items">
+  <a
+    [routerLink]="i.route"
+    [ngClass]="{ 'text-white': !i.isActive }"
+    href=""
+    class="material-symbols-outlined relative rounded-full h-14 w-14 flex items-center justify-center p-4 hover:bg-slate-300 hover:bg-opacity-10 cursor-pointer"
+  >
+    {{ i.icon }}
+  </a>
+  <a
+    href=""
+    class="relative hidden lg:flex items-center rounded-full hover:bg-opacity-10 cursor-pointer"
+  >
+    <p class="hidden lg:block text-white text-lg">{{ i.label }}</p>
+  </a>
+</div>
